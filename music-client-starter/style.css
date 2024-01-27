@@ -1,0 +1,173 @@
+
+body{
+  background: linear-gradient(90deg, rgb(0 0 0) 0%, rgb(37 59 37 / 89%) 18%, rgb(42 48 41) 100%);
+
+}
+#body-content{
+opacity:0.7;
+}
+label{
+  color:white;
+}
+.player {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  color:black;
+}
+h2{
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  color:white;
+  text-align:center;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,134,1) 100%);
+  border-radius:5px;
+  box-shadow: 0px 3px 3px 1px #5bdb8a
+}
+.btn{
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,134,1) 100%);
+  font-weight: bold;
+}
+input{
+  box-shadow: #a9e2b5 0px 2px 8px 2px;
+  border: none;
+  border-radius: 5px;
+  color:black;
+
+}
+
+#front-img{
+  animation: zoom-in-zoom-out 3s ease infinite;
+}
+#user{
+  color:white;
+}
+
+#logo{
+  margin: 24px;
+  width: 90px;
+  height: 90px;
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.play-list-btn, .play-list-btn i, .song-list-btn, .song-list-btn i {
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,134,1) 100%);
+  border-radius: 50%;
+}
+
+.play-list-btn i:hover{
+cursor: pointer;
+background: radial-gradient(circle, rgb(118, 131, 194) 0%, rgba(70,252,134,1) 100%);
+}
+
+.remove-btn, .remove-btn i{
+  background: radial-gradient(circle, #e60319 0%, rgb(181 45 45) 100%);
+  border-radius: 50%;
+}
+
+.buttons div {
+  padding: 20px;
+}
+h1{
+  font-family: "Audiowide", sans-serif;
+color:white;
+}
+
+#user {
+  font-family: 'Brush Script MT', cursive;
+}
+
+button {
+  border: none;
+}
+
+button :hover {
+  cursor: pointer;
+  background-color: greenyellow;
+}
+.playpause-song, .prev-song, .next-song {
+  padding: 25px;
+  opacity: 0.8;
+
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+
+.playpause-song:hover, .prev-song:hover, .next-song:hover {
+  opacity: 1.0;
+}
+table tbody, tfoot, tr{
+  border: 1px solid #3e3d3d;
+  color:white;
+}
+.slider-container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify the appearance of the slider */a
+.seek-slider, .volume-slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek-slider::-webkit-slider-thumb, .volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seek-slider:hover, .volume-slider:hover {
+  opacity: 1.0;
+}
+
+.seek-slider {
+  width: 60%;
+}
+
+.volume-slider {
+  width: 30%;
+}
+
+.current-time, .total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward, i.fa-random, i.fa-repeat, i.fa-circle, i.fa-bullseye {
+  cursor: pointer;
+}
+#errorMsg {
+  color: #ff4f4f;
+  font-size:22px;
+  font-weight: bold;
+}

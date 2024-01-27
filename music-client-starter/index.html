@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Arrow Music App</title>
+    <script src="./index.js" defer></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./lib/css/bootstrap.css" >
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./lib/css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="icon" type="image/x-icon" href="./music.png">
+</head>
+
+<body>
+    <div id="body-content" class="container-fluid row">
+        <section id="login-section" style="margin-top: 10%;">
+            <div class="container-fluid">
+              <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                  <img id="front-img" src="./music.png"
+                    class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                  <form id="login-form">       
+                    <div id="errorMsg"></div>   
+                    <div class="form-outline mb-4">
+                      <input type="text" id="username" class="form-control form-control-lg"
+                        placeholder="Enter a valid user name" />
+                      <label class="form-label" for="username">User Name</label>
+                    </div>
+          
+                    <div class="form-outline mb-3">
+                      <input type="password" id="password" class="form-control form-control-lg"
+                        placeholder="Enter password" />
+                      <label class="form-label" for="password">Password</label>
+                    </div>  
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                      <button type="submit" id="loginBtn" class="btn btn-primary btn-lg"
+                        style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <div id="logout-section" style="display:none" class="p-4">
+            <span class="left" style="float:left">
+              <img id="logo" src="./music.png" height="100" width="100" style="float:left">
+              <h1>Double Arrow</h1>
+            </span>
+            <span class="right" style="float:right;">
+              <span id="user" style="font-size: 30px; margin-right:40px"></span>
+              <button class="btn btn-primary" id="logoutBtn">Logout</button>
+            </span>
+        </div>
+
+        <div id="music-section">
+            <div class="form-outline  d-flex justify-content-center" style="margin-bottom:40px">
+                <input type="text" id="search-song" style="width:30%" class="form-outline"
+                  placeholder="Enter a keyword" />
+                  <a class="btn btn-primary" style="margin-left:5px" id="searchBtn">Search</a>
+              </div>
+
+            <div class="container-fluid col-md-12 col-lg-12 col-sm-12" id="musiclist-table-container"></div>
+            <div class="container-fluid bottom-container col-md-12 col-lg-12 col-sm-12">
+                <div id="playlist-table-container" style="margin: 40px 0px 0px 0px;
+            "></div>
+                <small id="empty-table" class="d-flex justify-content-center" style="margin-bottom:230px; color:white"></small>
+            </div>
+            <div class="row" id="song-play-section">
+            </div>
+            <div class="player" style="display:none">
+                <div class="details d-flex justify-content-center mt-4">
+                    <div class="now-playing"></div>
+                    <div class="song-title"></div>
+                </div>
+                <div class="buttons d-flex justify-content-center align-items-center ">
+                    <div class="prev-song" onclick="prevSong()"><i class="fa fa-step-backward fa-2x"></i></div>
+                    <div class="playpause-song" onclick="playpauseSong()"><i class="fa fa-play-circle fa-5x"></i></div>
+                    <div class="next-song" onclick="nextSong()"><i class="fa fa-step-forward fa-2x"></i></div>
+                    <div class="play-mode" onclick="setPlayMode()"><i class="fa fa-bullseye fa-2x"></i></div>
+                </div>
+                <div class="slider_container text-center">
+                    <span class="current-time">00:00</span>
+                    <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo()">
+                    <span class="total-duration">00:00</span>
+                </div>
+                <div class="slider-container">
+                    <i class="fa fa-volume-down"></i>
+                    <input type="range" min="1" max="100" value="99" class="volume-slider" onchange="setVolume()">
+                    <i class="fa fa-volume-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
