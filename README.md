@@ -56,4 +56,5 @@ Ensure you have Node.js and npm (Node Package Manager) installed on your machine
 - **Shuffle Mode**: Enable shuffle mode to play songs in a random order.
 - **Repeat Mode**: Enable repeat mode to continuously loop through your playlist.
 
+ ## **(This application was created as an academic project)**
 
